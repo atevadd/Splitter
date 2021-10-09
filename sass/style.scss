@@ -1,0 +1,285 @@
+// Primary color
+$strong-cyan: hsl(172, 67%, 45%);
+
+// Neutral
+$Very-dark-cyan: hsl(183, 100%, 15%);
+$Dark-grayish-cyan: hsl(186, 14%, 43%);
+$Dark-gray-cyan: hsl(184, 14%, 56%);
+$Light-grayish-cyan: hsl(185, 41%, 84%);
+$Light-gray-cyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+$error: #ff2222d5;
+
+// font weight
+$w-400: 400;
+$w-500: 500;
+$w-700: 700;
+
+// media query
+@mixin mobile {
+  @media screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+    @content;
+  }
+}
+
+// font import
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+$font: "Space mono", monospace;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $Light-grayish-cyan;
+  font-family: $font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip-wrapper {
+  width: 55%;
+  // border: 1px solid;
+
+  &-img {
+    display: block;
+    width: max-content;
+    margin: 0 auto 30px;
+  }
+
+  &-form {
+    position: relative;
+
+    .tip-form {
+      background-color: $Light-gray-cyan;
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      flex: 1 1 0;
+      flex-wrap: wrap;
+
+      .left-form,
+      .right-form {
+        width: 47%;
+      }
+
+      .left-form {
+        position: relative;
+        display: block;
+
+        .input-box {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin-bottom: 35px;
+          // border: 1px solid;
+
+          label {
+            font-family: inherit;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: $w-700;
+            color: #5f5f5f;
+          }
+
+          input[type="text"] {
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            text-align: right;
+            padding: 0 10px;
+            font-family: inherit;
+            border: none;
+            outline: none;
+            background-color: $Light-grayish-cyan;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: $Very-dark-cyan;
+            caret-color: $Very-dark-cyan;
+
+            &:focus {
+              border: 2px solid $strong-cyan;
+            }
+            &.error {
+              border: 2px solid $error;
+            }
+
+            &::placeholder {
+              color: $Dark-gray-cyan;
+            }
+          }
+
+          img {
+            position: absolute;
+            top: 45%;
+            left: 10px;
+            transform: translateY(45%);
+          }
+          small {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: $error;
+            font-weight: $w-700;
+          }
+          .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+
+            button {
+              padding: 6px;
+              outline: none;
+              border: none;
+              background-color: $Very-dark-cyan;
+              color: $White;
+              font-weight: $w-700;
+              font-family: inherit;
+              font-size: 1.3rem;
+              border-radius: 5px;
+              cursor: pointer;
+
+              &.selected{
+                background-color: $strong-cyan;
+                color: $Very-dark-cyan;
+              }
+
+              &:hover {
+                background-color: $Dark-gray-cyan;
+              }
+            }
+            input {
+              display: block;
+              text-align: right;
+              font-size: 1.3rem;
+              font-weight: $w-700;
+              font-family: inherit;
+              background-color: $Light-grayish-cyan;
+              border-radius: 5px;
+              outline: none;
+              border: none;
+              padding: 0 10px;
+              color: $Very-dark-cyan;
+              caret-color: $Very-dark-cyan;
+              cursor: pointer;
+
+              &:focus {
+                border: 2px solid $strong-cyan;
+
+                &::placeholder{
+                  color: transparent;
+                }
+              }
+
+              &::placeholder {
+                text-align: center;
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+      }
+
+      .right-form {
+        position: relative;
+        background-color: $Very-dark-cyan;
+        border-radius: 10px;
+        padding: 30px 30px;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        .tip-amount{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 28px;
+
+          &-text{
+            h3{
+              font-size: .75rem;
+              color: $White;
+              
+            }
+            p{
+              font-size: .64rem;
+              color: $Light-grayish-cyan;
+            }
+          }
+          &-price{
+            h1{
+              font-size: 2.4rem;
+              color: $strong-cyan;
+            }
+          }
+        }
+        .total{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 28px;
+
+          &-text{
+            h3{
+              font-size: .75rem;
+              color: $White;
+              
+            }
+            p{
+              font-size: .64rem;
+              color: $Light-grayish-cyan;
+            }
+          }
+          &-amount{
+            h1{
+              font-size: 2.4rem;
+              color: $strong-cyan;
+            }
+          }
+        }
+        button{
+          position: absolute;
+          bottom: 45px;
+          width: 80%;
+          padding: 8px;
+          left: 50%;
+          transform: translateX(-50%);
+          border: none;
+          border-radius: 5px;
+          outline: none;
+          background-color: $strong-cyan;
+          font-family: inherit;
+          font-weight: $w-700;
+          letter-spacing: 1px;
+          color: $Very-dark-cyan;
+          cursor: pointer;
+
+          &:disabled{
+            background-color: lighten($color: $Very-dark-cyan, $amount: 10%);
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}
