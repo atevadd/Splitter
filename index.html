@@ -24,24 +24,24 @@
         <div class="left-form">
           <div class="input-box">
             <label for="bill">Bill</label>
-            <input type="text" name="bill" id="bill" placeholder="0" />
+            <input type="text" name="bill" id="bill" placeholder="0"  inputmode="numeric"/>
             <img src="/images/icon-dollar.svg" alt="dollar symbol" />
             <small class="error"></small>
           </div>
           <div class="input-box">
             <label for="tip">Select Tip %</label>
             <div class="grid">
-              <button type="button" class="">5%</button>
-              <button type="button" class="">10%</button>
-              <button type="button" class="">15%</button>
-              <button type="button" class="">25%</button>
-              <button type="button" class="">50%</button>
-              <input type="tel" id="custom-input" placeholder="custom" />
+              <button type="button" value="5" class="">5%</button>
+              <button type="button" value="10" class="">10%</button>
+              <button type="button" value="15" class="">15%</button>
+              <button type="button" value="25" class="">25%</button>
+              <button type="button" value="50" class="">50%</button>
+              <input type="tel" id="custom-input" placeholder="custom"  inputmode="numeric"/>
             </div>
           </div>
           <div class="input-box">
             <label for="people">Number of People</label>
-            <input type="text" id="people" placeholder="0" class=""/>
+            <input type="text" id="people" placeholder="0" class="" inputmode="numeric"/>
             <img src="/images/icon-person.svg" class="user" alt="user icon">
             <small class="error">Can't be zero</small>
           </div>
@@ -54,7 +54,7 @@
               <p>/ person</p>
             </div>
             <div class="tip-amount-price">
-              <h1>$<span class="amount">0.00</span></h1>
+              <h1>$<span class="amount" id="price-amountt">0.00</span></h1>
             </div>
           </div>
           <div class="total">
@@ -63,10 +63,10 @@
               <p>/ person</p>
             </div>
             <div class="total-amount">
-              <h1>$<span class="amount">0.00</span></h1>
+              <h1>$<span class="amount" id="people-amount">0.00</span></h1>
             </div>
           </div>
-          <button type="reset" disabled>RESET</button>
+          <button type="reset" class="reset" disabled>RESET</button>
         </div>
       </form>
     </section>

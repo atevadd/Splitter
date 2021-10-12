@@ -189,6 +189,11 @@ body {
               &.selected {
                 background-color: $strong-cyan;
                 color: $Very-dark-cyan;
+
+                &:hover{
+                  background-color: $strong-cyan;
+                color: $Very-dark-cyan;
+                }
               }
 
               &:hover {

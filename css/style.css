@@ -234,6 +234,11 @@ body {
   color: #00494d;
 }
 
+.tip-wrapper-form .tip-form .left-form .input-box .grid button.selected:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
 .tip-wrapper-form .tip-form .left-form .input-box .grid button:hover {
   background-color: #7f9c9f;
 }
