@@ -186,18 +186,18 @@ body {
               border-radius: 5px;
               cursor: pointer;
 
-              &.selected {
-                background-color: $strong-cyan;
-                color: $Very-dark-cyan;
+              // &.selected {
+              //   background-color: $strong-cyan;
+              //   color: $Very-dark-cyan;
 
-                &:hover{
-                  background-color: $strong-cyan;
-                color: $Very-dark-cyan;
-                }
-              }
+              //   &:hover{
+              //     background-color: $strong-cyan;
+              //   color: $Very-dark-cyan;
+              //   }
+              // }
 
               &:hover {
-                background-color: $Dark-gray-cyan;
+                background-color: $strong-cyan;
               }
             }
             input {

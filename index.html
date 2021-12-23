@@ -41,9 +41,9 @@
           </div>
           <div class="input-box">
             <label for="people">Number of People</label>
-            <input type="text" id="people" placeholder="0" class="" inputmode="numeric"/>
+            <input type="text" id="people" placeholder="0" class="" inputmode="numeric" required/>
             <img src="/images/icon-person.svg" class="user" alt="user icon">
-            <small class="error">Can't be zero</small>
+            <small class="error">Can't be empty</small>
           </div>
         </div>
         <!-- The right form [total, tip amount] -->
@@ -54,7 +54,7 @@
               <p>/ person</p>
             </div>
             <div class="tip-amount-price">
-              <h1>$<span class="amount" id="price-amountt">0.00</span></h1>
+              <h1>$<span class="amount" id="tip-amount">0.00</span></h1>
             </div>
           </div>
           <div class="total">
@@ -63,7 +63,7 @@
               <p>/ person</p>
             </div>
             <div class="total-amount">
-              <h1>$<span class="amount" id="people-amount">0.00</span></h1>
+              <h1>$<span class="amount" id="total-amount">0.00</span></h1>
             </div>
           </div>
           <button type="reset" class="reset" disabled>RESET</button>
